@@ -40,17 +40,17 @@
   }
 
   .container__sidebar {
-    display: block;
-    width: 30%;
-    min-width: 320px;
+    width: 6rem;
+    height: 100vh;
     box-sizing: border-box;
-    padding: 40px;
     background-color: #383838;
+    position: fixed;
   }
 
   .container__body {
     flex: 1;
     background-color: $dark-gray;
+    margin-left: 6rem;
   }
 
   .container__body--white {

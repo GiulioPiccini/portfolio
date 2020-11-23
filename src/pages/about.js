@@ -1,48 +1,49 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
+import { Link, graphql } from 'gatsby'
+import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
-const About = ({ data: { about } }) => (
+const About = ({ data }) => (
   <Layout>
-    <article className="sheet">
-      <HelmetDatoCms seo={about.seoMetaTags} />
-      <div className="sheet__inner">
-        <h1 className="sheet__title">{about.title}</h1>
-        <p className="sheet__lead">{about.subtitle}</p>
-        <div className="sheet__gallery">
-          <Img fluid={about.photo.fluid} />
-        </div>
-        <div
-          className="sheet__body"
-          dangerouslySetInnerHTML={{
-            __html: about.bioNode.childMarkdownRemark.html,
-          }}
-        />
+  <Masonry className="showcase">
+    {data.allDatoCmsWork.edges.map(({ node: work }) => (
+      <div key={work.id} className="showcase__item">
+        <figure className="card">
+          <Link to={`/works/${work.slug}`} className="card__image">
+            <Img fluid={work.coverImage.fluid} />
+          </Link>
+          <figcaption className="card__caption">
+            <h6 className="card__title">
+              <Link to={`/works/${work.slug}`}>{work.title}</Link>
+            </h6>
+            <div className="card__description">
+              <p>{work.excerpt}</p>
+            </div>
+          </figcaption>
+        </figure>
       </div>
-    </article>
-  </Layout>
+    ))}
+  </Masonry>
+</Layout>
 )
 
 export default About
 
 export const query = graphql`
-  query AboutQuery {
-    about: datoCmsAboutPage {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      title
-      subtitle
-      photo {
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsSizes
-        }
-      }
-      bioNode {
-        childMarkdownRemark {
-          html
+  query IndexQuery {
+    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          excerpt
+          coverImage {
+            fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
         }
       }
     }

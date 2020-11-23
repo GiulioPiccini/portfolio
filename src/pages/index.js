@@ -1,51 +1,33 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Masonry from 'react-masonry-component'
+import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
-    <Masonry className="showcase">
-      {data.allDatoCmsWork.edges.map(({ node: work }) => (
-        <div key={work.id} className="showcase__item">
-          <figure className="card">
-            <Link to={`/works/${work.slug}`} className="card__image">
-              <Img fluid={work.coverImage.fluid} />
-            </Link>
-            <figcaption className="card__caption">
-              <h6 className="card__title">
-                <Link to={`/works/${work.slug}`}>{work.title}</Link>
-              </h6>
-              <div className="card__description">
-                <p>{work.excerpt}</p>
-              </div>
-            </figcaption>
-          </figure>
+    <article className="sheet">
+      <Helmet>
+          <title>My Title</title>
+          <meta charset="UTF-8" />
+          <meta name="description" content="Free Web tutorials" />
+          <meta name="keywords" content="HTML, CSS, JavaScript" />
+          <meta name="author" content="John Doe" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
+      <div className="sheet__inner">
+        <h1 className="sheet__title">title</h1>
+        <p className="sheet__lead">subtitle</p>
+        <div className="sheet__gallery">
+          gallery
         </div>
-      ))}
-    </Masonry>
+        <div className="sheet__body">
+          body
+        </div>
+      </div>
+    </article>
   </Layout>
 )
 
 export default IndexPage
 
-export const query = graphql`
-  query IndexQuery {
-    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
-      edges {
-        node {
-          id
-          title
-          slug
-          excerpt
-          coverImage {
-            fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsSizes
-            }
-          }
-        }
-      }
-    }
-  }
-`
+

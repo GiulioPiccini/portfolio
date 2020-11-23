@@ -32,7 +32,7 @@ module.exports = {
         short_name: "CP",
         description: `The application does cool things and makes your life better.`,
         lang: `en`,
-        start_url: "/",
+        start_url: ".",
         background_color: "#383838",
         theme_color: "#383838",
         display: "standalone",

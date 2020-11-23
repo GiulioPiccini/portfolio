@@ -17,13 +17,6 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
-    // Off line
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/about/`, `/index/`, `works/*`],
-      },
-    },
     // Manifest
     {
       resolve: `gatsby-plugin-manifest`,
@@ -49,6 +42,13 @@ module.exports = {
             type: `image/png`,
           },
         ],
+      },
+    },
+    // Off line
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/index/`, `works/*`],
       },
     },
   ],

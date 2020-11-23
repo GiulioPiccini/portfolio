@@ -48,22 +48,6 @@ module.exports = {
             sizes: `512x512`,
             type: `image/png`,
           },
-          {
-            src: `src/images/favicon/apple-touch-icon.png`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/favicon-16x16.png`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/favicon-32x32.png`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/favicon.ico`,
-            type: `image/png`,
-          },
         ],
       },
     },

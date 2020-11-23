@@ -28,15 +28,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Creative Portfolio",
-        short_name: "CP",
+        name: `Creative Portfolio`,
+        short_name: `CP`,
         description: `The application does cool things and makes your life better.`,
         lang: `en`,
-        start_url: ".",
-        background_color: "#383838",
-        theme_color: "#383838",
-        display: "standalone",
-        icon: "src/images/favicon/favicon-16x16.ico",
+        start_url: `/`,
+        background_color: `#383838`,
+        theme_color: `#383838`,
+        display: `standalone`,
+        icon: `src/images/favicon/favicon-16x16.ico`,
         icons: [
           {
             src: `src/images/favicon/android-chrome-192x192.png`,

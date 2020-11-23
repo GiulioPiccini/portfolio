@@ -40,7 +40,7 @@
   }
 
   .container__sidebar {
-    width: 6rem;
+    width: 5rem;
     height: 100vh;
     box-sizing: border-box;
     background-color: #383838;
@@ -50,7 +50,7 @@
   .container__body {
     flex: 1;
     background-color: $dark-gray;
-    margin-left: 6rem;
+    margin-left: 5rem;
   }
 
   .container__body--white {

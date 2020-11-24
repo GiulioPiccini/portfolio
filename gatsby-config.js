@@ -5,7 +5,7 @@ module.exports = {
     title: `Creative Portfolio`,
   },
   plugins: [
-    // Manifest ** Need to declare this plugin before gatsby-plugin-offline for work correctly **
+    // Manifest ** Need to declare this plugin before gatsby-plugin-offline for work correctly ** NEED TO ADD ICON AND ICONS
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -17,33 +17,7 @@ module.exports = {
         background_color: `#383838`,
         theme_color: `#383838`,
         display: `standalone`,
-        icon: `src/images/favicon/favicon-32x32.png`,
-        icons: [
-          {
-            src: `src/images/favicon/favicon-32x32.png`,
-            sizes: `32x32`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/favicon-16x16.png`,
-            sizes: `16x16`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/favicon/apple-touch-icon.png`,
-            type: `image/png`,
-          },
-        ],
+        icon: `public/favicon-32x32.png`,
       },
     },
     `gatsby-plugin-preload-fonts`,
@@ -51,6 +25,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // Dato CMS
     {
       resolve: `gatsby-source-datocms`,
@@ -63,6 +39,13 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/about/`, `/index/`, `works/*`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/public/static/`,
       },
     },
   ],

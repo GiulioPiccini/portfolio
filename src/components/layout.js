@@ -43,10 +43,10 @@ const TemplateWrapper = ({ children }) => {
           </div>
           <ul className="sidebar__menu">
             <li>
-              <Link to="/"><img src={'/home.png'} /></Link>
+              <Link to="/"><img src={'/home.png'} alt="Home T-Devs"/></Link>
             </li>
             <li>
-              <Link to="/about"><img src={'/blog.png'} width="30" /></Link>
+              <Link to="/about"><img src={'/blog.png'} width="30" alt="Blog T-Devs"/></Link>
             </li>
             <li>
               {

@@ -20,7 +20,7 @@ const IndexPage = () => (
             <h1 className="home__title">T-Devs</h1>
           </div>
           <div className="wrapper__t-devs__image">
-            <img src={'/t-devs.png'} width="300" />
+            <img src={'/t-devs.png'} alt="Background T-Devs"width="300" />
           </div>
           <div className="home__whois__text">
             <h3>Chi siamo</h3>

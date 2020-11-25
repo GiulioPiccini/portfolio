@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => {
       <div className="container__sidebar">
         <div className="sidebar">
           <div className="home__logo__wrapper">
-            <img src={'logo.png'} />
+            <img src={'logo.png'} alt="logo T-Devs"/>
           </div>
           <ul className="sidebar__menu">
             <li>
@@ -36,14 +36,9 @@ const TemplateWrapper = ({ children }) => {
               <Link to="/about"><img src={'/blog.png'} width="30" /></Link>
             </li>
             <li>
-            <label>
-              <input
-                type="checkbox"
-                onChange={onChangeTheme}
-                checked={theme === 'dark' ? true : false}
-              />
-              Dark mode
-            </label>
+              {
+                theme === "light" ? <img src={'Moon.png'} alt="Sun T-Devs" onClick={onChangeTheme}/> : <img src={'Sun.png'} alt="Sun T-Devs" onClick={onChangeTheme}/>
+              }
             </li>
           </ul>
         </div>

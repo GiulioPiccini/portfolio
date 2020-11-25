@@ -1,0 +1,205 @@
+/* Homepage */
+
+// FirstSection
+.first__viewport__container {
+  height: 100vh;
+  width: 100%;
+}
+// Wrapper heading first section
+.site__heading_wrapper {
+  position: relative;
+  top: 50px;
+  left: -700px;
+  -webkit-animation: slide-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 1s;
+}
+
+// Title
+.home__span__title {
+  font-size: 9rem;
+  color: $light-purple;
+  font-family: $primary-font;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  text-shadow: 0 1px 0 #705394, 0 2px 0 #705394, 0 3px 0 #705394, 0 4px 0 #705394, 0 5px 0 #705394, 0 6px 0 #705394, 0 7px 0 #705394, 0 8px 0 #705394, 0 9px 0 #705394, 0 50px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home__title {
+  font-size: 11rem;
+  color: $bright-green;
+  font-family: $primary-font;
+  transform: translateY(-50px);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  text-shadow: 0 1px 0 #6e8a00, 0 2px 0 #6e8a00, 0 3px 0 #6e8a00, 0 4px 0 #6e8a00, 0 5px 0 #6e8a00, 0 6px 0 #6e8a00, 0 7px 0 #6e8a00, 0 8px 0 #6e8a00, 0 9px 0 #6e8a00, 0 50px 30px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper__t-devs__image {
+  position: absolute;
+  top: -205px;
+  left: 630px;
+  -webkit-animation: slide-down 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-down 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 1.s;
+}
+
+// Button in first view
+.home__whois__button {
+  background: transparent;
+  border: 1px solid $bright-green;
+  color: $bright-green;
+  padding: 1rem 1rem;
+  margin: 60px 0 0 375px;
+  font-size: 2rem;
+  outline: none;
+  opacity: 0;
+  -webkit-animation: opacity-button 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: opacity-button 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 4.3s;
+}
+
+// Scroll
+.scroll{
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  cursor: pointer;
+  margin-top: -25px;
+  margin-left: -15px;
+  &:hover {
+    .wheel{
+      animation-name: scroll-wheel;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+.scroll .mouse{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border: 2px solid $bright-green;
+  border-radius: 20px;
+}
+.scroll .wheel{
+  width: 5px;
+  height: 5px;
+  top: 10px;
+  left: 50%;
+  position: absolute;
+  background: $bright-green;
+  display: block;
+  border-radius: 50%;
+  margin-left: -2px;
+}
+@keyframes scroll-wheel{
+  from{
+      transform: translate3d(0, 0, 0);
+  }
+  to{
+      transform: translate3d(0, 20px, 0);
+  }
+}
+
+
+// Keyframe
+
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(850px);
+    transform: translateX(850px);
+  }
+  100% {
+    -webkit-transform: translateX(820px);
+    transform: translateX(820px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(850px);
+    transform: translateX(850px);
+  }
+  100% {
+    -webkit-transform: translateX(820px);
+    transform: translateX(820px);
+  }
+}
+// image effect t-devs
+@-webkit-keyframes slide-down {
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(430px);
+    transform: translateY(430px);
+  }
+}
+@keyframes slide-down {
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(430px);
+    transform: translateY(430px);
+  }
+}
+
+// opacity button
+@-webkit-keyframes opacity-button {
+  0% {
+   opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity-button {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+

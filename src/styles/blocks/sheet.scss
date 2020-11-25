@@ -4,7 +4,7 @@
 }
 
 .sheet__inner {
-  max-width: 600px;
+  width:100%;
 }
 
 .sheet__title {
@@ -76,7 +76,11 @@
 
 @media screen and (min-width: 900px) {
   .sheet {
-    padding: 40px 60px;
+    padding: 0;
+    height: 100vh;
+    background-color: $dark-bg-color;
+    background-image: url('/background.png');
+    background-size: cover;
   }
 
   .sheet__title {

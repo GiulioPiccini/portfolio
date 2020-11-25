@@ -15,15 +15,32 @@ const IndexPage = () => (
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <div className="sheet__inner">
-        <h1 className="sheet__title">title</h1>
-        <p className="sheet__lead">subtitle</p>
+        <div className="first__viewport__container">
+          <div className="site__heading_wrapper">
+            <span className="home__span__title">Better Call</span>
+            <h1 className="home__title">T-Devs</h1>
+          </div>
+          <div className="wrapper__t-devs__image">
+              <img src={'/t-devs.png'} width="300" />
+            </div>
+        <button className="home__whois__button">
+          Chi Siamo
+        </button>
+        </div>
+        <p className="sheet__lead"></p>
         <div className="sheet__gallery">
           gallery
         </div>
         <div className="sheet__body">
-          body
         </div>
       </div>
+      <div class="scroll">
+          <a href="yourlink">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+          </a>
+        </div>
     </article>
   </Layout>
 )

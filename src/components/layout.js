@@ -20,18 +20,15 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <div className="container__sidebar">
         <div className="sidebar">
-          <h6 className="sidebar__title">
-            <Link to="/">home</Link>
-          </h6>
-          <div className="sidebar__intro">
-            sidebar intro
+          <div className="home__logo__wrapper">
+            <img src={'logo.png'} />
           </div>
           <ul className="sidebar__menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/"><img src={'/home.png'} /></Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about"><img src={'/blog.png'} /></Link>
             </li>
           </ul>
         </div>

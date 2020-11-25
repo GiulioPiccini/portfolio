@@ -49,11 +49,23 @@
 
   .container__body {
     flex: 1;
-    background-color: $dark-gray;
+    background-color: white;
+    transition: background-color 500ms linear;
     margin-left: 5rem;
+    p{
+      color: black;
+      transition: color 500ms linear;
+    }
   }
 
-  .container__body--white {
-    background-color: white;
+  .container__body--dark {
+    flex: 1;
+    background-color: $semi-dark-black;
+    transition: background-color 500ms linear;
+    margin-left: 5rem;
+    p{
+      color: white;
+      transition: color 500ms linear;
+    }
   }
 }

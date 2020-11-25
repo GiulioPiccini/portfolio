@@ -8,6 +8,11 @@ import "../styles/index.scss";
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  const onChangeTheme = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light")
+  }
   return (
     <div className={`container ${showMenu ? "is-open" : ""}`}>
       <Helmet>
@@ -30,10 +35,20 @@ const TemplateWrapper = ({ children }) => {
             <li>
               <Link to="/about"><img src={'/blog.png'} width="30" /></Link>
             </li>
+            <li>
+            <label>
+              <input
+                type="checkbox"
+                onChange={onChangeTheme}
+                checked={theme === 'dark' ? true : false}
+              />
+              Dark mode
+            </label>
+            </li>
           </ul>
         </div>
       </div>
-      <div className="container__body">
+      <div className={theme === "light" ? "container__body" : "container__body--dark"}>
         <div className="container__mobile-header">
           <div className="mobile-header">
             <div className="mobile-header__menu">
@@ -48,7 +63,7 @@ const TemplateWrapper = ({ children }) => {
               <Link to="/">home</Link>
             </div>
           </div>
-        </div>
+        </div >
         {children}
       </div>
     </div>

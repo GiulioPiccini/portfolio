@@ -1,6 +1,5 @@
 .sheet {
   padding: 40px 20px;
-  background-color: white;
 }
 
 .sheet__inner {
@@ -78,7 +77,6 @@
   .sheet {
     padding: 0;
     height: 100vh;
-    background-color: $dark-bg-color;
     background-image: url('/background.png');
     background-size: cover;
   }

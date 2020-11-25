@@ -47,18 +47,24 @@
 }
 
 // Button in first view
-.home__whois__button {
-  background: transparent;
-  border: 1px solid $bright-green;
-  color: $bright-green;
-  padding: 1rem 1rem;
-  margin: 60px 0 0 375px;
-  font-size: 2rem;
-  outline: none;
+.home__whois__text {
+  margin: 80px 0 0 90px;
+  width: 60%;
   opacity: 0;
   -webkit-animation: opacity-button 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: opacity-button 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation-delay: 4.3s;
+  p {
+    color: $white;
+    font-size: 1.3rem;
+  }
+  h3 {
+    color: $bright-green;
+    font-family: $primary-font;
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 0 1px 0 #6e8a00, 0 2px 0 #6e8a00, 0 3px 0 #6e8a00, 0 4px 0 #6e8a00, 0 5px 0 #6e8a00, 0 6px 0 #6e8a00, 0 7px 0 #6e8a00, 0 8px 0 #6e8a00, 0 9px 0 #6e8a00, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
 }
 
 // Scroll
@@ -66,7 +72,7 @@
   width: 30px;
   height: 50px;
   position: absolute;
-  bottom: 50%;
+  bottom: 4%;
   left: 50%;
   cursor: pointer;
   margin-top: -25px;
@@ -152,8 +158,8 @@
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(430px);
-    transform: translateY(430px);
+    -webkit-transform: translateY(440px);
+    transform: translateY(440px);
   }
 }
 @keyframes slide-down {
@@ -162,8 +168,8 @@
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(430px);
-    transform: translateY(430px);
+    -webkit-transform: translateY(440px);
+    transform: translateY(440px);
   }
 }
 
@@ -176,12 +182,8 @@
   40% {
     opacity: 0.5;
   }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
   100% {
-    opacity: 0.9;
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -193,12 +195,8 @@
   40% {
     opacity: 0.5;
   }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
   100% {
-    opacity: 0.9;
+    opacity: 1;
     transform: scale(1);
   }
 }

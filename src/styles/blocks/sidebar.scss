@@ -5,8 +5,14 @@
 }
 
 .sidebar__menu {
-  margin-bottom: 20px;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   li {
+    margin-bottom: 20px;
     a {
       text-decoration: none;
       display: block;
@@ -18,6 +24,11 @@
       &.is-active a {
         font-weight: bold;
         color: $light-purple;
+      }
+      img{
+        width: 60px;
+        margin: auto;
+        display: block;
       }
     }
   }

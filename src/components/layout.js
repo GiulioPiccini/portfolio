@@ -28,7 +28,7 @@ const TemplateWrapper = ({ children }) => {
               <Link to="/"><img src={'/home.png'} /></Link>
             </li>
             <li>
-              <Link to="/about"><img src={'/blog.png'} /></Link>
+              <Link to="/about"><img src={'/blog.png'} width="30" /></Link>
             </li>
           </ul>
         </div>

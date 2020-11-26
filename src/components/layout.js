@@ -49,6 +49,9 @@ const TemplateWrapper = ({ children }) => {
               <Link to="/about"><img src={'/blog.png'} width="30" alt="Blog T-Devs"/></Link>
             </li>
             <li>
+              <Link to="/social"><img src={'/Instagram-Tdevs.png'} width="30" alt="Instagram T-Devs"/></Link>
+            </li>
+            <li>
               {
                 theme === "light" ? <img src={'Moon.png'} alt="Moon T-Devs" onClick={onChangeTheme}/> : <img src={'Sun.png'} alt="Sun T-Devs" onClick={onChangeTheme}/>
               }

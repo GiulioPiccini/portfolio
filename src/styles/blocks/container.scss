@@ -49,6 +49,7 @@
 
   .container__body {
     flex: 1;
+    height: 200vh;
     background-color: white;
     transition: background-color 500ms linear;
     margin-left: 5rem;
@@ -60,6 +61,7 @@
 
   .container__body--dark {
     flex: 1;
+    height: 200vh;
     background-color: $semi-dark-black;
     transition: background-color 500ms linear;
     margin-left: 5rem;

@@ -17,7 +17,7 @@ module.exports = {
         background_color: `#383838`,
         theme_color: `#383838`,
         display: `standalone`,
-        icon: `public/favicon-32x32.png`,
+        icon: `./public/favicon-32x32.png`,
       },
     },
     `gatsby-plugin-preload-fonts`,

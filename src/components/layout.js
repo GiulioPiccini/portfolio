@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/
-import React, { useState, useEffect } from "react";
+import React, { useState  } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { Helmet } from 'react-helmet'
@@ -8,23 +8,15 @@ import "../styles/index.scss";
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  const [theme, setTheme] = useState("light");
 
   const onChangeTheme = () => {
     if(theme === "light"){
-      localStorage.setItem("theme", "dark")
       setTheme("dark")
     }else{
-      localStorage.setItem("theme", "light")
       setTheme("light")
     }
   }
-
-  useEffect(() => {
-    if(!localStorage.getItem("theme")){
-      localStorage.setItem("theme", "light")
-    }
-  });
 
   return (
     <div className={`container ${showMenu ? "is-open" : ""}`}>

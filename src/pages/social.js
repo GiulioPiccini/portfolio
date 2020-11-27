@@ -8,7 +8,7 @@ const Social = () => {
 
   const fetchData = async () => {
     // FETCH INSTAGRAM
-    await fetch("https://www.instagram.com/mimmipik/?__a=1")
+    await fetch("https://www.instagram.com/tdiv2020/?__a=1")
       .then(async response => await response.json())
       .then(async response => {
         await setInstagramPosts(response.graphql.user.edge_owner_to_timeline_media.edges);
